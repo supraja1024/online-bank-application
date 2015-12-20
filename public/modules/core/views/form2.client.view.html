@@ -1,0 +1,54 @@
+<section data-ng-controller="LandingPageController" data-ng-init="initForm2()">
+    <h2>Registration Form (Cont..)</h2>
+    <form name="userform2" data-ng-submit="form2submit()" class="signin form-horizontal" autocomplete="off" style="padding-top:1%">
+        <fieldset>
+            <div class="form-group">
+                <label for="PANCard">* PAN Card</label>
+                <input type="text" required id="panCard" name="panCard" class="form-control" data-ng-model="customer.pancard" placeholder="PAN Card" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" title="Enter Valid PAN Card number" required>
+            </div>
+            <div class="form-group">
+                <label for="GAI">* Gross Annual Income(in Rupees)</label>
+                <input type="text" id="GAIncome" name="GAIncome" class="form-control" data-ng-model="customer.grossannualincome" placeholder="Gross Annual Income" pattern="^[0-9\d]+$" title="Annual Income should be a digit only" required>
+            </div>
+            <div class="form-group">
+                <label for="company">* Company Name</label>
+                <input type="text" id="companyname" name="companyname" class="form-control" data-ng-model="customer.company" placeholder="Company Name" pattern="[a-zA-Z ]*$" title="Enter Valid Company Name" required>
+            </div>
+            <div class="form-group">
+                <label for="designation">* Designation</label>
+                <select name="designationList" class="form-control" ng-model="customer.designation" required>
+                    <option value="">None</option>
+                    <option value="Staff">Staff</option>
+                    <option value="Manager">Manager</option>
+                    <option value="designation3">Doctor</option>
+                    <option value="designation4">Others</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="profession">* Profession</label>
+                <select name="professionList" class="form-control" ng-model="customer.profession" required>
+                    <option value="">None</option>
+                    <option value="Business">Engineering</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Teacher">Teaching</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Address">* Address</label>
+                <textarea class="form-control" id="address" ng-model="customer.address" maxlength="500" pattern="^[a-zA-Z0-9\s,'-]*$" title="Enter Valid Address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="pincode">* Pincode</label>
+                <input type="text" id="pin-code" name="pin-code" class="form-control" data-ng-model="customer.pincode" placeholder="Pin Code" pattern="^\d{6}$" required>
+            </div>
+            <div class="text-center form-group">
+                <button type="submit" class="btn btn-large btn-primary">Next</button>
+                <button type="button" ng-click="resetForm2()" value="Reset" class="btn btn-large btn-primary">Reset</button>
+            </div>
+            <div data-ng-show="error" class="text-center text-danger">
+                <strong data-ng-bind="error"></strong>
+            </div>
+        </fieldset>
+    </form>
+</section>

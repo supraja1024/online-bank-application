@@ -1,0 +1,51 @@
+.undecorated-link:hover {
+	text-decoration: none;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+.ng-invalid.ng-dirty {
+	border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+	border-color: #78FA89;
+}
+.login-div-properties {
+    display: table;
+    width:80%;
+    height: 100%;
+    position: absolute;
+    min-width: 640px;
+    min-height: 360px;
+    top: 0;
+}
+.login-div-wrapper {
+    width: 50%;
+    height: 90%;
+    display: table-cell;
+    vertical-align: middle;
+    max-height: 47%;
+    margin: auto;
+    min-width: 300px;
+    min-height: 300px;
+    opacity: 0.9;
+}
+.landing-div-top{
+    width: 100%;
+    height: 50%;
+    background: url('/modules/core/img/globe.jpg') no-repeat;
+}
+.apply{
+    cursor: pointer;
+}
+.landing-div-bottom{
+    position: absolute;
+    top: 70%;
+    right: -10%;
+    width: 500px;
+    height: 200px;
+    background: url('/modules/core/img/landing-div-bottom.jpg') no-repeat 90% 90% ;
+}
+.toggle{
+    font-weight: bold !important;
+}

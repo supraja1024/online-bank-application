@@ -1,0 +1,38 @@
+<section data-ng-controller="LandingPageController" data-ng-init="initForm3()" >
+    <h2>Registration Form (Cont..)</h2>
+    <form name="userForm3" data-ng-submit="form3submit()" class="signin form-horizontal" autocomplete="off" style="padding-top:1%">
+        <fieldset>
+            <div class="form-group">
+                <label for="accounttype">* Account Type applying For</label>
+                <select name="account-type" class="account-type" ng-model="customer.accounttype" required>
+                    <option value="">None</option>
+                    <option value="Savings">Savings Account</option>
+                    <option value="Current">Current Account</option>
+                    <option value="Deposit">Deposit Account</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="checkbox">
+                <label class="toggle">
+                    <input type="checkbox" id="fixed-deposit" data-ng-model="customer.fixeddeposit">Apply For Fixed Deposit</label>
+            </div>
+            <div class="checkbox">
+                <label class="toggle">
+                    <input type="checkbox" id="credit-card" data-ng-model="customer.creditcard">Holding any credit card from ABC Bank</label>
+            </div>
+            <div class="checkbox">
+                <label class="toggle">
+                    <input type="checkbox" id="agree" data-ng-model="customer.terms" required> Agree Terms and Conditions</label>
+            </div>
+            <div class="text-center form-group">
+                <button type="submit" class="btn btn-large btn-primary">Apply</button>
+                <button type="button" ng-click="resetForm3()" value="Reset" class="btn btn-large btn-primary">Reset</button>
+            </div>
+            <div data-ng-show="error" class="text-center text-danger">
+                <strong data-ng-bind="error"></strong>
+            </div>
+            <div class = "alert alert-success" ng-if="submitted && !errorSubmission">Congratulations. Your account has been registered successfully</div>
+            <div class = "alert alert-error" ng-if="!submitted && errorSubmission">{{errormessage}}</div>
+        </fieldset>
+    </form>
+</section>
